@@ -5,6 +5,22 @@ and [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.0] - 2024-04-21
+
+### Added
+
+- Functions:
+  - `file.DocumentFromJSON`
+  - `file.IsCommandName`
+- Package `tool`.
+- Tool `ema`.
+
+### Changed
+
+- Package `file` was improved:
+  - Type `Content` implements `io.WriterTo` to write EMA form of content.
+  - Type `Text` is based on `string` instead of `[]string`.
+
 ## [0.0.2] - 2024-04-12
 
 ### Added
@@ -17,6 +33,7 @@ and [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - First package `file`.
 
-[Unreleased]: https://github.com/dark-pink/ema/compare/v0.0.2...main
+[Unreleased]: https://github.com/dark-pink/ema/compare/v0.1.0...main
+[0.1.0]: https://github.com/dark-pink/ema/compare/v0.0.2...v0.1.0
 [0.0.2]: https://github.com/dark-pink/ema/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/dark-pink/ema/tag/v0.0.1

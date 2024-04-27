@@ -30,29 +30,15 @@ func TestParseDocument(t *testing.T) {
 						},
 					},
 				},
-				Text{
-					"This",
-					" ",
-					"is",
-					" ",
-					"-{",
-				},
+				Text("This is -{"),
 				Data{
 					"use": []any{"bold", json.Number("1")},
 				},
-				Text{
-					"EMA",
-				},
+				Text("EMA"),
 				Data{
 					"use": []any{"x"},
 				},
-				Text{
-					" ",
-					"file",
-					" ",
-					"format",
-					"!",
-				},
+				Text(" file format!"),
 			},
 		}, d)
 	}

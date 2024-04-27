@@ -1,6 +1,7 @@
 package file
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 	"io"
@@ -65,4 +66,22 @@ func parseDocument(file string, source io.Reader) (*Document, error) {
 		}
 	}
 	return d, nil
+}
+
+func (d *Document) ToEMA() ([]byte, error) {
+	b := &bytes.Buffer{}
+	for _, v := range d.Content {
+		if _, err := v.WriteTo(b); err != nil {
+			return nil, fmt.Errorf("file.Document.ToEMA: %w", err)
+		}
+	}
+	return b.Bytes(), nil
+}
+
+func (d *Document) ToJSON() []any {
+	list := make([]any, len(d.Content))
+	for i, v := range d.Content {
+		list[i] = v.content()
+	}
+	return list
 }
