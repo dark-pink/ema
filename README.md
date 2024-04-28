@@ -47,8 +47,8 @@ Following commands and JSON object are equivalent:
 { bold }          = {"use": ["bold"]}
 {bold[1]}         = {"use": ["bold", 1]}
 { bold [1] }      = {"use": ["bold", 1]}
-{bold[1, 2]}         = {"use": ["bold", 1, 2]}
-{ bold [1, 2] }      = {"use": ["bold", 1, 2]}
+{bold[1, 2]}      = {"use": ["bold", 1, 2]}
+{ bold [1, 2] }   = {"use": ["bold", 1, 2]}
 {bold{"w": 1}}    = {"use": ["bold", {"w": 1}]}
 { bold {"w": 1} } = {"use": ["bold", {"w": 1}]}
 ```
