@@ -5,6 +5,9 @@ and [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+- Build without symbol table and debug information.
+
 ## [0.1.0] - 2024-04-21
 
 ### Added

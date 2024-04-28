@@ -26,7 +26,7 @@ jobs:
           VERSION: ${{ github.ref_name }}
         run: |
           $v=$Env:VERSION.Trim('v')
-          go build -ldflags "-X darkp.ink/ema.version=${v}" -o "ema-${v}.exe" -trimpath cmd/ema/main.go
+          go build -ldflags "-s -X darkp.ink/ema.version=${v}" -o "ema-${v}.exe" -trimpath cmd/ema/main.go
       - name: Pack release
         env:
           VERSION: ${{ github.ref_name }}
@@ -58,7 +58,7 @@ jobs:
           GOOS: ${{ matrix.goos }}
           GOARCH: ${{ matrix.goarch }}
           VERSION: ${{ github.ref_name }}
-        run: go build -ldflags "-X darkp.ink/ema.version=${VERSION#v}" -o "ema-${VERSION#v}" -trimpath cmd/ema/main.go
+        run: go build -ldflags "-s -X darkp.ink/ema.version=${VERSION#v}" -o "ema-${VERSION#v}" -trimpath cmd/ema/main.go
       - name: Pack release
         env:
           VERSION: ${{ github.ref_name }}
